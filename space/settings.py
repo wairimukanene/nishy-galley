@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'galley'
+    'galley',
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [

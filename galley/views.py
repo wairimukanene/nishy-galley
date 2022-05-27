@@ -4,5 +4,15 @@ from django.http  import HttpResponse
 
 
 # Create your views here.
-def welcome(request):
-  return render(request, 'welcome.html')
+def galley(request):
+  return render(request, 'galley/galley.html')
+
+
+def viewphoto(request,pk):
+  return render(request, 'galley/photo.html')
+
+
+def addphoto(request):
+  return render(request, 'galley/add.html')
+
+
