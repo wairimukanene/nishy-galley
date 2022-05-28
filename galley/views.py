@@ -8,7 +8,7 @@ def galley(request):
   return render(request, 'galley/galley.html')
 
 
-def viewphoto(request,pk):
+def viewphoto(request, pk):
   return render(request, 'galley/photo.html')
 
 
