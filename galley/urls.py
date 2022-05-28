@@ -18,7 +18,7 @@ from . import views
 
 urlpatterns=[
     path('',views.galley,name = 'galley'),
-    path('photo/<str:pk>/',views.viewphoto, name = 'photos'),
+    path('photo/<str:pk>/',views.viewphoto, name = 'photo'),
     path('add/', views.addphoto, name='add')
 
 ]
