@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http  import HttpResponse
 from .models import Category, Photo
 
@@ -31,6 +31,14 @@ def addphoto(request):
       category, created = Category.objects.get_or_create(name=data['category_new'])
     else:
       category= None
+      
+      photo = Photo.objects.create(
+        category=category,
+        description=data['description'],
+        image=image,
+      )
+      
+      return redirect
   
     
     
