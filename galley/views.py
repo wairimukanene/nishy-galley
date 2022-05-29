@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from django.http  import HttpResponse
+from .models import Category, Photo
+
 
 
 
 # Create your views here.
 def galley(request):
-  return render(request, 'galley/galley.html')
+  categories = Category.objects.all()
+  context = {'categories':categories}
+  
+  return render(request, 'galley/galley.html', context)
 
 
 def viewphoto(request, pk):
