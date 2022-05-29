@@ -15,7 +15,8 @@ def galley(request):
 
 
 def viewphoto(request, pk):
-  return render(request, 'galley/photo.html')
+  photo = Photo.objects.get(id=pk)
+  return render(request, 'galley/photo.html', {'photo': photo})
 
 
 def addphoto(request):

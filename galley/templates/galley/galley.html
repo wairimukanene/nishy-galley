@@ -47,9 +47,9 @@
             src="{{photo.image.url}}"
             alt="card image cap">
             <div class="card-body">
-              <small>Category:pet</small>
+              <small>Category: {{photo.category.name}}</small>
             </div>
-            <a  href="{% url 'photo' 5 %}" class="btn btn-outline-dark btn-sm m-1">Views</a>
+            <a  href="{% url 'photo' photo.id %}" class="btn btn-outline-dark btn-sm m-1">Views</a>
 
          </div>
         </div>
