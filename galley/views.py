@@ -8,7 +8,8 @@ from .models import Category, Photo
 # Create your views here.
 def galley(request):
   categories = Category.objects.all()
-  context = {'categories':categories}
+  photos= Photo.objects.all()
+  context = {'categories':categories ,'photos':photos}
   
   return render(request, 'galley/galley.html', context)
 
