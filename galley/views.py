@@ -20,6 +20,10 @@ def viewphoto(request, pk):
 
 
 def addphoto(request):
-  return render(request, 'galley/add.html')
+  categories = Category.objects.all()
+  
+  context = {'categories':categories}
+  
+  return render(request, 'galley/add.html',context)
 
 
