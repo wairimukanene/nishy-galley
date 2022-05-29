@@ -38,7 +38,7 @@ def addphoto(request):
         image=image,
       )
       
-      return redirect
+      return redirect('galley')
   
     
     
