@@ -25,10 +25,12 @@
             Categories
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Interior Design</li>
-            <li class="list-group-item">Art</li>
-            <li class="list-group-item">Food</li>
-            <li class="list-group-item">Drinks</li>
+            <li class="list-group-item">ALL</li>
+            {% for category in categories %}
+            <li class="list-group-item">{{category.name}}</li>
+
+            {% endfor %}
+           
               <a href="{% url 'add'%}" class="btn btn-dark btn-block btn-sm m-1">Add Photo</a>
           </ul>
         </div>  
