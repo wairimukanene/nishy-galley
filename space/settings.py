@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'space.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gallery',
+        'NAME': 'wairimu',
         'USER': 'wairimu',
     'PASSWORD':'wairimu12',
     }
