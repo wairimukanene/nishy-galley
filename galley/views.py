@@ -14,7 +14,7 @@ def galley(request):
     photos = Photo.objects.filter(category__name=category)
     
   categories = Category.objects.all()
-  context = {'categories':categories ,'photos':photos}
+  context = {'categories':categories ,'photos':photos,}
   
   return render(request, 'galley/galley.html', context)
 
