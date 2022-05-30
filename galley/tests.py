@@ -8,7 +8,7 @@ class testPhoto(TestCase):
         self.category = Category(category='Food')
         self.category.save_category()
 
-        self.image_test = Image(id=1, name='art', description='test image', location=self.location,
+        self.image_test = Image(id=1, name='art', description='test image',
                                 category=self.category)
 
     def test_instance(self):
