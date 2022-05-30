@@ -8,6 +8,12 @@ class Category(models.Model):
   def __str__(self):
     return self.name
   
+  def save_name(self):
+    self.save()
+    
+  def delete_name(self):
+    self.delete()
+  
   
 class Photo(models.Model):
   category = models.ForeignKey(
