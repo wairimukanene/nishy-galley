@@ -26,10 +26,9 @@
           </div>
           <ul class="list-group list-group-flush">
             <li class="list->group-item">
-              <a href="{% url 'galley' %}">ALL</a>
-              </li>
+              <a href="{% url 'galley' %}">ALL</a></li>
             {% for category in categories %}
-            <li class="list-group-item">  <a href="{% url 'galley' %}?category={{category.name}}"> {{category.name}}</a>
+            <li class="list-group-item"><a href="{% url 'galley' %}?category={{category.name}}"> {{category.name}}</a>
             </li>
 
             {% endfor %}
