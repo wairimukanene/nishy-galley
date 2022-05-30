@@ -25,18 +25,21 @@ def addphoto(request):
     data = request.POST
     image = request.FILES.get('image')
     
+    
+    
+    
     if data['category'] != 'none':
       category =Category.objects.get(id=data['category'])
     elif data['category_new'] != '':
-      category, created = Category.objects.get_or_create(name=data['category_new'])
+       category, created = Category.objects.get_or_create(name=data['category_new'])
     else:
-      category= None
+      category = None
       
       photo = Photo.objects.create(
-        category=category,
-        description=data['description'],
-        image=image,
-      )
+      category=category,
+      description=data['description'],
+      image=image,
+    )
       
       return redirect('galley')
   
@@ -47,4 +50,10 @@ def addphoto(request):
   
   return render(request, 'galley/add.html',context)
 
+      
+      
+      
+    
+    
+ 
 
